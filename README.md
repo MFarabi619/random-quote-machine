@@ -12,7 +12,8 @@ The IDE I'm using for development is VS Code with the following relevant extensi
 * Quokka.js (Displays runtime values next to the line of code so that I don't have to run console.log as much)
 * Vim (Allows use of Vim inside VS Code)
 vscode-icons (Overhaul of default VS Code icons to improve development experience)
-* The goal(s) of this project will be as follows:
+
+The goal(s) of this project will be as follows:
 
 * Attain a better understanding of React, Redux, Bootstrap, and SaSS.
 * Improve at making focused commits with detailed documentation to show progress of project.
