@@ -18,3 +18,9 @@ The goal(s) of this project will be as follows:
 * Attain a better understanding of React, Redux, Bootstrap, and SaSS.
 * Improve at making focused commits with detailed documentation to show progress of project.
 * Use the GitHub Projects feature to break the project down to smaller, easily-achievable chunks.
+
+
+Learning log:
+
+* Was introduced to React hooks, and realized that they were far easier to work with than the class system taught in the current freeCodeCamp curriculum. 
+* Learned and used some basic folder structure so that project could be easily scaled in the future
