@@ -1,20 +1,33 @@
 .App {
   text-align: center;
+  background-color: aliceblue;
+
+  header {
+    background-color: aqua;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
 }
 
-.App-header {
-  background-color: aqua;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.quote-box{
+background-color: black;
+border: 1rem;
+border-color: aqua;
+border-radius: 10px;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.credits{
+  margin: 1rem;
+  font-size: small;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
 

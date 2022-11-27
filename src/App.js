@@ -7,9 +7,11 @@ import { colorArray } from "./colors";
 
 function App() {
   const [color, setColor] = useState(colorArray[0]);
+  const [quote, setQuote] = useState("This is some text to be displayed");
 
   const handleChange = () => {
     setColor(colorArray[Math.floor(Math.random() * colorArray.length - 1)]);
+    setQuote("You don't get what you want, you get what you work for");
     console.log("handleChange function called");
   };
 
@@ -19,8 +21,13 @@ function App() {
         className="App-header"
         style={{ backgroundColor: `${color}`, color: `${color}` }}
       >
-        <p></p>
-        <Button onClick={handleChange}>New quote</Button>
+        <div className="quote-box">
+          {quote}
+          <Button className="quote-button" onClick={handleChange}>
+            New quote
+          </Button>
+        </div>
+        <p className="credits">By Mumtahin Farabi</p>
       </header>
     </div>
   );
