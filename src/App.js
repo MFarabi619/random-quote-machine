@@ -8,7 +8,12 @@ import { quoteArray } from "./quotes";
 
 function App() {
   const [color, setColor] = useState(colorArray[0]);
-  const [quote, setQuote] = useState("This is some text to be displayed");
+  const [quote, setQuote] = useState(
+    quoteArray[Math.floor(Math.random() * (quoteArray.length - 1))].quote
+  );
+  const [author, setAuthor] = useState(
+    quoteArray[Math.floor(Math.random() * (quoteArray.length - 1))].author
+  );
 
   const handleChange = () => {
     let randomColor =
@@ -16,11 +21,11 @@ function App() {
 
     setColor(randomColor);
 
-    let vari = Math.floor(Math.random() * (quoteArray.length - 1));
-    console.log(vari);
-    let randomQuote = quoteArray[vari];
+    let quoteIndex = Math.floor(Math.random() * (quoteArray.length - 1));
+    let randomQuote = quoteArray[quoteIndex].quote;
 
     setQuote(randomQuote);
+    setAuthor(quoteArray[quoteIndex].author);
     console.log("handleChange function called");
   };
 
@@ -32,6 +37,7 @@ function App() {
       >
         <div className="quote-box">
           <p className="quote-text">{quote}</p>
+          <p className="author">- {author}</p>
           <Button className="quote-button" onClick={handleChange}>
             New quote
           </Button>
