@@ -2,18 +2,28 @@ import "./App.scss";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./custom.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { colorArray } from "./colors";
-import { quoteArray } from "./quotes";
+
+let quotesDBUrl =
+  "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
 
 function App() {
   const [color, setColor] = useState(colorArray[0]);
-  const [quote, setQuote] = useState(
-    quoteArray[Math.floor(Math.random() * (quoteArray.length - 1))].quote
-  );
-  const [author, setAuthor] = useState(
-    quoteArray[Math.floor(Math.random() * (quoteArray.length - 1))].author
-  );
+  const [quoteArray, setQuoteArray] = useState(null);
+
+  const fetchQuotes = async (url) => {
+    const response = await fetch(url);
+    const parsedJSON = await response.json();
+    setQuoteArray(parsedJSON.quotes);
+  };
+
+  useEffect(() => {
+    fetchQuotes(quotesDBUrl);
+  }, [quotesDBUrl]);
+
+  const [quote, setQuote] = useState("some text");
+  const [author, setAuthor] = useState("some author");
 
   const handleChange = () => {
     let randomColor =
@@ -22,11 +32,11 @@ function App() {
     setColor(randomColor);
 
     let quoteIndex = Math.floor(Math.random() * (quoteArray.length - 1));
+
     let randomQuote = quoteArray[quoteIndex].quote;
 
     setQuote(randomQuote);
     setAuthor(quoteArray[quoteIndex].author);
-    console.log("handleChange function called");
   };
 
   return (
