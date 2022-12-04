@@ -48,9 +48,21 @@ function App() {
         <div className="quote-box">
           <p className="quote-text">{quote}</p>
           <p className="author">- {author}</p>
-          <Button className="quote-button" onClick={handleChange}>
-            New quote
-          </Button>
+          <div className="buttons">
+            <a
+              id="tweet-quote"
+              href={encodeURI(
+                `http://www.twitter.com/intent/tweet?text="${quote}" \n\n - ${author}`
+              )}
+            >
+              <Button className="tweet-button">
+                <i className="fa fa-twitter"></i>
+              </Button>
+            </a>
+            <Button className="quote-button" onClick={handleChange}>
+              New quote
+            </Button>
+          </div>
         </div>
         <p className="credits">By Mumtahin Farabi</p>
       </header>
