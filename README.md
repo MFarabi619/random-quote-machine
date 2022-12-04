@@ -1,5 +1,5 @@
 # random-quote-machine
-[Live demo](mfarabi619.github.io/random-quote-machine/)
+[Live demo](https://mfarabi619.github.io/random-quote-machine/)
 
 ![Picture of project](https://i.ibb.co/QkSpj5g/Screenshot-2022-12-04-100913.jpg)
 
