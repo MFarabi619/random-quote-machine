@@ -9,35 +9,44 @@ let quotesDBUrl =
   "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
 
 function App() {
-  const [color, setColor] = useState(colorArray[0]);
   const [quoteArray, setQuoteArray] = useState(null);
 
   const fetchQuotes = async (url) => {
+    //fetches and parses data from url
     const response = await fetch(url);
     const parsedJSON = await response.json();
     setQuoteArray(parsedJSON.quotes);
   };
 
   useEffect(() => {
+    //Called after page loads
     fetchQuotes(quotesDBUrl);
   }, [quotesDBUrl]);
 
-  const [quote, setQuote] = useState("some text");
-  const [author, setAuthor] = useState("some author");
+  const randomizer = (array) => {
+    //Returns random elements from array passed into it
+    return array[Math.floor(Math.random() * array.length)];
+  };
+
+  const [quote, setQuote] = useState("");
+  const [author, setAuthor] = useState("");
+  const [color, setColor] = useState(randomizer(colorArray));
 
   const handleChange = () => {
-    let randomColor =
-      colorArray[Math.floor(Math.random() * (colorArray.length - 1))];
-
+    let randomColor = randomizer(colorArray);
     setColor(randomColor);
 
-    let quoteIndex = Math.floor(Math.random() * (quoteArray.length - 1));
-
-    let randomQuote = quoteArray[quoteIndex].quote;
-
-    setQuote(randomQuote);
-    setAuthor(quoteArray[quoteIndex].author);
+    let randomQuote = randomizer(quoteArray);
+    setQuote(randomQuote.quote);
+    setAuthor(randomQuote.author);
   };
+
+  useEffect(() => {
+    //Displays a random quote once page loads
+    if (quoteArray) {
+      handleChange();
+    }
+  }, [quoteArray]);
 
   return (
     <div className="App">
