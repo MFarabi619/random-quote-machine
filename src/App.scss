@@ -14,7 +14,7 @@
   }
 }
 
-.quote-box{
+#quote-box{
   width: 450px;
 background-color: black;
 border: 1rem;
@@ -22,12 +22,12 @@ border-color: aqua;
 border-radius: 10px;
 padding: 1rem;
 
-.quote-text{
+#text{
   width: 450px;
 padding: 1.5rem 4rem 0 2rem;
 }
 
-.author{
+#author{
   display: flex;
   justify-content: flex-end;
   padding: 0px 20px;

@@ -45,13 +45,13 @@ function App() {
         className="App-header"
         style={{ backgroundColor: `${color}`, color: `${color}` }}
       >
-        <div className="quote-box">
-          <p className="quote-text">
+        <wrapper id="quote-box">
+          <p id="text">
             <i className="fa fa-quote-left"></i>
             <span> </span>
             {quote}
           </p>
-          <p className="author">- {author}</p>
+          <p id="author">- {author}</p>
           <div className="buttons">
             <a
               id="tweet-quote"
@@ -63,11 +63,11 @@ function App() {
                 <i className="fa fa-twitter"></i>
               </Button>
             </a>
-            <Button className="quote-button" onClick={handleChange}>
+            <Button id="new-quote" onClick={handleChange}>
               New quote
             </Button>
           </div>
-        </div>
+        </wrapper>
         <p className="credits">By Mumtahin Farabi</p>
       </header>
     </div>
