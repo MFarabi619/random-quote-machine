@@ -29,3 +29,4 @@ Learning log:
 * Was introduced to React hooks, and realized that they were far easier to work with than the class system taught in the current freeCodeCamp curriculum. 
 * Learned and used some basic folder structure so that project could be easily scaled in the future
 * Gained experience planning out the project, and breaking large tasks into smaller tasks, which made the project as a whole seem less daunting.
+* Didn't end up using Redux at all and used React state hooks instead.
