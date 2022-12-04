@@ -5,10 +5,7 @@
 
 Hi!
 
-
-
-
-This is freeCodeCamp's Random Quote Machine project which is required for the completion of the Front End Development Libraries certification.
+This is static website that displays random quotes.
 
 The IDE I'm using for development is VS Code with the following relevant extensions:
 
