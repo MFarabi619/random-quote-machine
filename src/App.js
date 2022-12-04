@@ -68,11 +68,15 @@ function App() {
                 `http://www.twitter.com/intent/tweet?text="${quote}" \n\n - ${author}`
               )}
             >
-              <Button className="tweet-button">
+              <Button id="tweet-button" style={{ backgroundColor: `${color}` }}>
                 <i className="fa fa-twitter"></i>
               </Button>
             </a>
-            <Button id="new-quote" onClick={handleChange}>
+            <Button
+              id="new-quote"
+              onClick={handleChange}
+              style={{ backgroundColor: `${color}` }}
+            >
               New quote
             </Button>
           </div>
