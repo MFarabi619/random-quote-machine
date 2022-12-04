@@ -46,7 +46,11 @@ function App() {
         style={{ backgroundColor: `${color}`, color: `${color}` }}
       >
         <div className="quote-box">
-          <p className="quote-text">{quote}</p>
+          <p className="quote-text">
+            <i className="fa fa-quote-left"></i>
+            <span> </span>
+            {quote}
+          </p>
           <p className="author">- {author}</p>
           <div className="buttons">
             <a
