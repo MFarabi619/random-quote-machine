@@ -1,7 +1,7 @@
 # random-quote-machine
 [Live demo](https://mfarabi619.github.io/random-quote-machine/)
 
-![Picture of project](https://i.ibb.co/QkSpj5g/Screenshot-2022-12-04-100913.jpg)
+![Picture of project](https://github.com/MFarabi619/random-quote-machine/blob/main/src/Screenshot%202023-02-01%20064359.jpg?raw=true)
 
 Hi!
 
